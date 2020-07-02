@@ -2,4 +2,4 @@
 
 ### Pré Requisitos:
 
-1. Edge (Chromium) Webdriver baixado
+1. Edge (Chromium) Webdriver baixado e instalado. ()

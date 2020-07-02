@@ -1,11 +1,18 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from time import sleep
 
+from time import sleep
+from os import environ
 
 def main():
 
-    driver = webdriver.Edge(executable_path="C:\\Users\\FERNANDOALARIOPIRES\\Desktop\\EdgeDriver\\msedgedriver")
+    # Pegar o HOMEPATH (Windows)
+    home_dir = environ.get("USERPROFILE")
+
+    # PATH Completo para o WebDriver
+    webdriver_path = f"{home_dir}\\Desktop\\EdgeDriver\\msedgedriver"
+
+    driver = webdriver.Edge(executable_path=webdriver_path)
     driver.get("https://10fastfingers.com/typing-test/portuguese")
 
     # Verifica se estamos na pagina certa
